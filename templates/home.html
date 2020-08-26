@@ -3,12 +3,24 @@
 
 
 {% block content %}
-<h1>Homepage</h1>
-{% if user.is_authenticated %}
-<h2>Hi {{ user.username }}</h2>
-<a href="{% url 'logout' %}">Log Out</a>
-{% else %}
-<a href="{% url 'login' %}">Log in</a>
-<a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('/static/images/bg_1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <h3 class="v">Lab - Time to Read</h3>
+          <h3 class="vr">Since - 1992</h3>
+        <div class="col-md-11 ftco-animate text-center">
+          <h1>BookStore</h1>
+          <h2><span>Time to Read</span></h2>
+        </div>
+        <div class="mouse">
+                      <a href="#" class="mouse-icon">
+                          <div class="mouse-wheel"><span class="ion-ios-arrow-down"></span></div>
+                      </a>
+                  </div>
+      </div>
+    </div>
+  </div>
+  
 {% endblock content %}
