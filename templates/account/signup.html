@@ -1,13 +1,13 @@
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
-<title>{% block title %} Log In {% endblock title %}</title>
+<title>{% block title %} Sign Up {% endblock title %}</title>
 
 {% block content %}
 
 <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/bg_2.jpg);">
+            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/static/images/bg_20.jpg);">
                 <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
                     <span class="icon-play"></span>
                 </a>
@@ -15,14 +15,14 @@
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
       <div class="heading-section-bold mb-5 mt-md-5">
           <div class="ml-md-0">
-            <h2 class="mb-4">Log In</span></h2>
+            <h2 class="mb-4">Sign Up</span></h2>
         </div>
       </div>
       <div class="pb-md-5">
         <form method="POST">
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit">Log In</button>
+            <button type="submit">Sign Up</button>
         </form>
                 </div>
             </div>
