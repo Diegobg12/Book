@@ -44,8 +44,15 @@ INSTALLED_APPS = [
     # Third-party
     'crispy_forms',
     'allauth',
+    # Account manager
     'allauth.account',
+    'allauth.socialaccount',
+    # Account providers
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+
 ]
+
 # DJANGO-ALLAUTH CONFIG
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT = 'home'

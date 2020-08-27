@@ -1,4 +1,6 @@
 {% extends '_base.html' %}
+{% load socialaccount %}  
+{% providers_media_js %}
 {% load crispy_forms_tags %}
 <title>{% block title %} Sign Up {% endblock title %}</title>
 
@@ -24,6 +26,22 @@
             {{ form|crispy }}
             <button type="submit">Sign Up</button>
         </form>
+        <ul>            
+            <li>
+                <a href="{% provider_login_url "facebook" method="js_sdk" %}"><div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div></a>
+          </li>
+
+          <li>
+            <div class="col-md-3">
+                <a class="btn btn-outline-dark" href="{% provider_login_url "google" %}" role="button" style="text-transform:none">
+                  <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                  Sign Up with Google
+                </a>
+              </div>
+          </li>
+        </ul>
+
+
                 </div>
             </div>
         </div>
