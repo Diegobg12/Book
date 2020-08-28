@@ -11,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      - "DJANGO_SECRET_KEY=)*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n"
+      - "DJANGO_SECRET_KEY=5id8j92it_zs9f!06!$jr24^(r$dr^1co#i4ka6(wtmhms^13l"
       - "DJANGO_DEBUG=True"
   db:
     image: postgres:11

@@ -15,10 +15,21 @@
                 </a>
             </div>
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
-      <div class="heading-section-bold mb-5 mt-md-5">
+      <div class="heading-section-bold mt-md-5">
           <div class="ml-md-0">
-            <h2 class="mb-4">Log In</span></h2>
-        </div>        
+            <h3 class="mb-4" style="text-align: center; padding-top: 30px;">Log In </span></h3>
+            <div class="social-auth">            
+                <a href="{% provider_login_url "facebook" method="js_sdk" %}"> <button type="button" class="btn facebook-auth" style="background: #4267B2;color: white;"><i class="icon-facebook" style="margin: 8px;font-size: 20px;"></i> Facebook</button></a>
+                <a href="{% provider_login_url "google" %}"> <button type="button" class="btn btn-fb" style="background: #DB4437;;color: white;"><i class="icon-google" style="margin: 8px;font-size: 20px;"></i></i> Google</button></a>
+                <a href="{% provider_login_url "google" %}"> <button type="button" class="btn btn-fb" style="background: #1DA1F2;;color: white;"><i class="icon-twitter" style="margin: 8px;font-size: 20px;"></i></i> Twitter</button></a>
+
+            </div>
+        </div>
+      </div>
+      <div id='divider'>
+        <div><hr></div>
+        <span>OR</span>
+       <div><hr></div>
       </div>
       <div class="pb-md-5">
         <form method="POST">
@@ -26,21 +37,6 @@
             {{ form|crispy }}
             <button type="submit">Log In</button>
         </form>
-        <ul>            
-            <li>
-                <a href="{% provider_login_url "facebook" method="js_sdk" %}"><div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div></a>
-          </li>
-
-          <li>
-            <div class="col-md-3">
-                <a class="btn btn-outline-dark" href="{% provider_login_url "google" %}" role="button" style="text-transform:none">
-                  <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                  Login with Google
-                </a>
-              </div>
-          </li>
-        </ul>
-
                 </div>
             </div>
         </div>
