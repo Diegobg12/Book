@@ -5,7 +5,9 @@
 
 <div class="hero-wrap js-fullheight" style="background-image: url('/static/images/bg_1.jpg');">
     <div class="overlay"></div>
+   
     {% if messages %}
+    <div class="alerts-box">
 {% for message in messages %}
 <div class="alert {{ message.tags }} alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
@@ -13,6 +15,7 @@
     {{ message }}
 </div>
 {% endfor %}
+</div>
 {% endif %}
 
 
