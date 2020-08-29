@@ -40,6 +40,21 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
+            <li>
+              <div class="header__search">
+                <form role="search" method="GET" class="header__search-form" action="{% url 'search_results' %}">
+                    <label>
+                        <span class="hide-content">Search for:</span>
+                        <input type="search" class="search-field" placeholder="Type Keywords" value="" name="search" title="Search for:" autocomplete="off">
+                    </label>
+                    <input type="submit" class="search-submit" value="Search" >
+                </form>
+    
+                <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+    
+            </div>  <!-- end header__search -->
+            </li>
+
 	          <li class="nav-item {% if request.path == '/' %}  active{% endif %}"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
 	          <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
@@ -58,7 +73,7 @@
 				<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}</a>
 				<div class="dropdown-menu" aria-labelledby="dropdown04">
 					<a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a>
-				</div>
+        </div>
 			  </li>
 			  {% else %}
 			  <li class="nav-item "><a href="{% url 'account_login' %}" class="nav-link">Log In</a></li>
