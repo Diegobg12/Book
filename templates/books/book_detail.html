@@ -18,7 +18,11 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="images/menu-2.jpg" class="image-popup"><img src="/static/images/product-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+					{% if book.cover %}
+					<a href="{{ book.cover.url }}" class="image-popup"><img src="{{ book.cover.url }}" class="img-fluid" alt="Colorlib Template"></a>
+					{% else %}
+					<a href="{% static 'images/default-cover.jpg' %}" class="image-popup"><img src="{% static 'images/default-cover.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+					{% endif %}
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3>{{ book.title }}</h3>

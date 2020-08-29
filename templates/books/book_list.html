@@ -20,7 +20,11 @@
                 {% for book in book_list %}
     			<div class="col-sm col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="{{ book.get_absolute_url }}" class="img-prod"><img class="img-fluid" src="{% static 'images/product-1.jpg' %}" alt="Colorlib Template">
+                {% if book.cover %}
+                <a href="{{ book.get_absolute_url }}" class="iimg-prod"><img src="{{ book.cover.url }}" class="img-fluid" alt="Colorlib Template"></a>
+                {% else %}
+                <a href="{{ book.get_absolute_url }}" class="iimg-prod"><img src="{% static 'images/default-cover.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+                {% endif %}
     						<span class="status">30%</span>
     					</a>
     					<div class="text py-3 px-3">
