@@ -13,7 +13,8 @@ services:
     environment:
       - "DJANGO_SECRET_KEY=5id8j92it_zs9f!06!$jr24^(r$dr^1co#i4ka6(wtmhms^13l"
       - "DJANGO_DEBUG=True"
-   
+      - "EMAIL_SENDER=bygreenxsas@gmail.com"
+      - "EMAIL_SENDER_API=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"
   db:
     image: postgres:11
     volumes:

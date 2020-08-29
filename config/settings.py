@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     #local
     'accounts',
     'pages',
+    'books',
     # Third-party
     'crispy_forms',
     'allauth',
