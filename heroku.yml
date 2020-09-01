@@ -1,0 +1,17 @@
+# Resources to provision on app creation
+setup:
+    addons:
+      - plan: heroku-postgresql
+  # Reference the Dockerfiles to build into Docker images 
+  build:
+    docker:
+      web: Dockerfile
+      worker: worker/Dockerfile
+  release:
+    # Use the worker image to execute the release command
+    image: worker
+    command:
+      - python manage.py collectstatic --noinput
+  # The process types and commands to run
+  run:
+    web: gunicorn config.wsgi

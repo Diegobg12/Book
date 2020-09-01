@@ -4,6 +4,7 @@ services:
   web:
     build: .
     command: python /code/manage.py runserver 0.0.0.0:8000
+    command: gunicorn config.wsgi -b 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
@@ -12,6 +13,8 @@ services:
       - db
     environment:
       - "DJANGO_SECRET_KEY=5id8j92it_zs9f!06!$jr24^(r$dr^1co#i4ka6(wtmhms^13l"
+      - "EMAIL_SENDER=bygreenxsas@gmail.com"
+      - "EMAIL_SENDER_API=PoJAKpasdinañkejK5VK5kThGsu_9hvKJSs"
       - "DJANGO_DEBUG=True"
       - "DJANGO_SECURE_SSL_REDIRECT=False"
       - "DJANGO_SECURE_HSTS_SECONDS=0"

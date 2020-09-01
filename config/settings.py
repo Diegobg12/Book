@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'allauth',
     'debug_toolbar',
+    'whitenoise.runserver_nostatic',
     # Account manager
     'allauth.account',
     'allauth.socialaccount',
@@ -103,6 +104,7 @@ MIDDLEWARE = [
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -187,6 +189,7 @@ STATICFILES_FINDERS = [
     # other finders..
     # 'compressor.finders.CompressorFinder',
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Add media folder
 

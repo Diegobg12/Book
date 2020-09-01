@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --main:rgb(248, 215, 171);
+  --main:rgb(241, 193, 129);
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -4011,13 +4011,22 @@ input[type="button"].btn-block {
   padding-right: 0;
   padding-left: 0;
   border-radius: 0; }
-
+.alerts-box{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 80%;
+  right: 0%;
+  width: auto;
+}
 .alert {
-  position: relative;
-  padding: 0.75rem 1.25rem;
+  padding: 1% 1.5%;
   margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem; }
+  border-bottom: 4px solid var(--main);
+  border-radius: 0.25rem;
+  background-color: whitesmoke;
+  width: auto;
+ }
 
 .alert-heading {
   color: inherit; }
@@ -9088,4 +9097,31 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-    
+
+
+/* add social media */
+
+.social-auth{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+#divider{
+  display:flex;
+  flex-wrap:no-wrap;
+  margin-top: 20px;
+}
+
+#divider div{
+  flex:1 0 200px;
+  padding:2px;
+  height:1px;
+}
+
+.confirm-email{
+  text-align: center;
+}
+
