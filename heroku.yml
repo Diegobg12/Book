@@ -1,13 +1,12 @@
 setup:
-    addons:
+  addons:
     - plan: heroku-postgresql
-  build:
-    docker:
-      web: Dockerfile
-  release:
-    image: web
-    command:
-      - python manage.py collectstatic --noinput
-  # The process types and commands to run
-  run:
-    web: gunicorn config.wsgi
+build:
+  docker:
+    web: Dockerfile
+release:
+  image: web
+  command:
+    - python manage.py collectstatic --noinput
+run:
+  web: gunicorn config.wsgi
