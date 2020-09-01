@@ -6,7 +6,6 @@ setup:
   build:
     docker:
       web: Dockerfile
-      worker: worker/Dockerfile
   release:
     # Use the worker image to execute the release command
     image: worker
